@@ -1,0 +1,6 @@
+# Ambiente do removedor de fundo (rembg) — não versionar (pesado)
+.bgvenv/
+
+# Sistema
+.DS_Store
+Thumbs.db
