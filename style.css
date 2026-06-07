@@ -1201,6 +1201,60 @@ section h2{
   .leaf-word{font-size:.74rem;padding:4px 9px}
 }
 
+/* ====== VALORES ====== */
+.values{
+  padding:100px 0;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(255,181,71,.16), transparent 50%),
+    radial-gradient(circle at 10% 88%, rgba(95,168,58,.16), transparent 50%),
+    var(--cream-soft);
+}
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+.value-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:32px 28px;
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s,box-shadow .3s;
+}
+.value-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-md);
+}
+.value-icon{
+  width:62px;height:62px;
+  border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;
+  margin-bottom:18px;
+  background:linear-gradient(135deg,var(--green),var(--green-light));
+  box-shadow:0 6px 16px rgba(95,168,58,.30);
+}
+.value-card:nth-child(2) .value-icon,
+.value-card:nth-child(5) .value-icon{
+  background:linear-gradient(135deg,var(--accent),var(--accent-warm));
+  box-shadow:0 6px 16px rgba(255,138,61,.32);
+}
+.value-card:nth-child(3) .value-icon,
+.value-card:nth-child(6) .value-icon{
+  background:linear-gradient(135deg,var(--green-dark),var(--green));
+  box-shadow:0 6px 16px rgba(47,125,42,.32);
+}
+.value-card h3{
+  font-size:1.2rem;
+  color:var(--green-dark);
+  margin-bottom:10px;
+}
+.value-card p{
+  color:var(--text-muted);
+  font-size:.95rem;
+}
+
 /* ====== PROFESSORES ====== */
 .teachers{padding:100px 0;background:var(--cream-soft)}
 .team-grid{
