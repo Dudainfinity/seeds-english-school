@@ -1,5 +1,5 @@
 // ====== Configuração ======
-const telefone = "5531999999999"; // Substitua pelo número real
+const telefone = "5541987988877"; // Número que recebe as inscrições (55 + DDD 41 + número)
 
 // ====== Envio do formulário pelo WhatsApp ======
 function enviarWhatsApp() {
