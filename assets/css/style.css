@@ -61,6 +61,8 @@ ul{list-style:none}
   line-height:1.2;
   white-space:nowrap;
 }
+/* Versão curta do botão de inscrição aparece só no mobile */
+.btn-label-short{display:none}
 .btn-primary{
   background:linear-gradient(135deg,var(--accent) 0%,var(--accent-warm) 100%);
   color:#fff;
@@ -1150,8 +1152,14 @@ section h2{
     width:100%;
   }
   .nav-list a::after{display:none}
-  .btn-whatsapp{display:none}
-  .header-inner{padding:12px 18px}
+  .header-inner{padding:12px 14px;gap:10px;justify-content:flex-start;flex-wrap:nowrap}
+  .header .logo{order:1;margin-right:auto;min-width:0}
+  .header .logo-text{font-size:.95rem}
+  .header .btn-whatsapp{order:2;padding:9px 14px;font-size:.82rem;width:auto;flex:0 0 auto;gap:0}
+  .header .btn-whatsapp svg{display:none}
+  .header .btn-whatsapp .btn-label-full{display:none}
+  .header .btn-whatsapp .btn-label-short{display:inline}
+  .header .nav{order:3;flex:0 0 auto}
   .form-row{grid-template-columns:1fr}
   .signup-form{padding:24px}
   .plan-card.highlight-card{transform:none}
