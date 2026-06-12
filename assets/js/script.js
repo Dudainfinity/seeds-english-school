@@ -16,17 +16,23 @@ function enviarWhatsApp() {
     return;
   }
 
-  let mensagem = `Olá! Meu nome é ${nome} (${idade} anos).%0A`;
-  mensagem += `Quero fazer inscrição no curso *${curso}*.%0A`;
-  mensagem += `Meu nível de inglês: ${nivel}.%0A`;
-  mensagem += `Meu melhor horário: ${horario}.%0A`;
+  let mensagem = `Olá! Meu nome é ${nome} (${idade} anos).\n`;
+  mensagem += `Quero fazer inscrição no curso *${curso}*.\n`;
+  mensagem += `Meu nível de inglês: ${nivel}.\n`;
+  mensagem += `Meu melhor horário: ${horario}.\n`;
   mensagem += `WhatsApp para contato: ${whatsapp}.`;
 
   if (mensagemExtra) {
-    mensagem += `%0A%0AObservação: ${mensagemExtra}`;
+    mensagem += `\n\nObservação: ${mensagemExtra}`;
   }
 
-  window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+  // No celular o window.open costuma ser bloqueado; navega direto se for o caso.
+  const novaAba = window.open(url, "_blank");
+  if (!novaAba) {
+    window.location.href = url;
+  }
 }
 
 // ====== Menu mobile ======
