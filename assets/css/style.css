@@ -663,12 +663,34 @@ section h2{
 }
 
 .course-card{
+  position:relative;
   background:var(--cream-soft);
   border-radius:var(--radius-lg);
   padding:32px 28px;
   border:1px solid var(--border);
   box-shadow:var(--shadow-sm);
   transition:transform .3s,box-shadow .3s;
+}
+.soon-tag{
+  position:absolute;
+  top:16px;right:16px;
+  background:var(--accent);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:600;
+  padding:4px 12px;
+  border-radius:999px;
+  letter-spacing:.3px;
+}
+.course-btn-soon{
+  opacity:1;
+  transform:none;
+  background:#c9c9c9;
+  cursor:default;
+}
+.reveal-card:hover .course-btn-soon{
+  background:#c9c9c9;
+  transform:none;
 }
 .course-card:hover{
   transform:translateY(-6px);
